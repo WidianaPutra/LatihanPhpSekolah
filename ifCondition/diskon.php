@@ -23,7 +23,7 @@ if (isset($_POST["cekDiskon"])) {
 
 <body>
   <form action="diskon.php" method="POST">
-    <input type="text" name="input">
+    <input type="text" name="input" value="0">
     <button name="cekDiskon">Cek Diskon</button>
   </form>
   <h1>

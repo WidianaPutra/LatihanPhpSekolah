@@ -16,34 +16,34 @@ if (isset($_POST['button'])) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    h1 {
-      text-align: center;
-    }
+  h1 {
+    text-align: center;
+  }
 
-    .form {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-    }
+  .form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 
-    form {
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-    }
+  form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
 
-    * {
-      margin: 0;
-      padding: 0;
-    }
+  * {
+    margin: 0;
+    padding: 0;
+  }
 
-    .detail {
-      text-align: center;
-    }
+  .detail {
+    text-align: center;
+  }
 
-    textarea {
-      resize: none;
-    }
+  textarea {
+    resize: none;
+  }
   </style>
   <title>Document</title>
 </head>

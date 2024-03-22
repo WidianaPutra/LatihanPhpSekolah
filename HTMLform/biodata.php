@@ -1,5 +1,5 @@
 <?php
-if (isset($_POST['button'])) {
+if (isset ($_POST['button'])) {
   $nama_siswa = $_POST['nama_siswa'];
   $alamat = $_POST['alamat'];
   $jenis_kelamin = $_POST['jenis_kelamin'];
@@ -14,12 +14,12 @@ if (isset($_POST['button'])) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="./tailwind.config.js"></script>
   <style>
     form input,
-    form textarea {
+    form textarea,
+    select {
       margin: 10px;
-      outline: none;
+      border: 2px solid black;
       padding: 5px 2px;
     }
 
@@ -32,7 +32,7 @@ if (isset($_POST['button'])) {
 
 <body>
   <div class="container flex w-full h-screen justify-center items-center flex-col">
-    <form action="index.php" method="POST" class="bg-crimson p-5 gap-5 rounded-3xl">
+    <form action="biodata.php" method="POST" class="bg-crimson p-5 gap-5 rounded-3xl">
       <!-- nama siswa -->
       <label for="">Nama Siswa</label>
       <input type="text" name="nama_siswa" placeholder="Nama Siswa">

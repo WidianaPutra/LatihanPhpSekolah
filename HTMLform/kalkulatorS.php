@@ -18,12 +18,12 @@ if (isset ($_POST['submit'])) {
     padding: 0;
   }
   </style>
-  <title>Document</title>
+  <title>Rarw</title>
 </head>
 
 <body>
   <form action="./kalkulator.php" method="POST">
-    <input type="text" name="1" value=" ">
+    <input type="text" name="1" value="0">
     <select name="operator" id="">
       <option value="0">+</option>
       <option value="1">-</option>
@@ -31,21 +31,28 @@ if (isset ($_POST['submit'])) {
       <option value="3">/</option>
       <option value="4">pangkat</option>
     </select>
-    <input type="text" name="2" value=" ">
+    <input type="text" name="2" value="0">
     <input type="submit" name="submit" value="Process">
   </form>
   <h1> Hasil adalah :
     <?php
-    if ($op === "0")
-      echo $a1 + $a2;
-    if ($op === "1")
-      echo $a1 - $a2;
-    if ($op === "2")
-      echo $a1 * $a2;
-    if ($op === "3")
-      echo $a1 / $a2;
-    if ($op === "4")
-      echo $a1 ** $a2;
+    switch ($op) {
+      case "0":
+        echo $a1 + $a2;
+        break;
+      case "1":
+        echo $a1 - $a2;
+        break;
+      case "2":
+        echo $a1 * $a2;
+        break;
+      case "3":
+        echo $a1 / $a2;
+        break;
+      case "4":
+        echo $a1 ** $a2;
+        break;
+    }
     ?>
   </h1>
 </body>

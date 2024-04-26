@@ -11,24 +11,44 @@
         extend: {
           colors: {
             clifford: '#da373d',
+            crimson: "crimson",
+            black: "black"
           }
         }
       }
     }
   </script>
+  <style>
+    input, button, select {
+      border: 1px solid black;
+    }
+  </style>
   <title>Program</title>
 </head>
 
 <body>
-  <div class="flex flex-col w-full h-screen justify-center items-center text-center">
-    <a href="./kalkulatorIF.php">kalkulator If</a>
-    <a href="./kalkulatorS.php">kalkulator Switch</a>
-    <a href="./fotoCopy.php">fotoCopy</a>
-    <a href="./biodata.php">Biodata</a>
-    <a href="./laundry.php">Laundry</a>
-    <a href="./sim.php">Sim</a>
+  <div class="flex justify-center h-20 items-center flex-col">
+    <h1>Portofolio</h1>
     <a href="https://github.com/WidianaPutra/LatihanPhpSekolah">=> Code Lebih Lengkap</a>
   </div>
+  <div class="flex w-full gap-4 justify-center">
+    <a href="?p=bio" class="bg-crimson p-2 text-white">Biodata</a>
+    <a href="?p=fc" class="bg-crimson p-2 text-white">FotoCopy</a>
+    <a href="?p=kal" class="bg-crimson p-2 text-white">Kalkulator</a>
+    <a href="?p=laundry" class="bg-crimson p-2 text-white">Laundr</a>
+    <a href="?p=sim" class="bg-crimson p-2 text-white">Sim</a>
+  </div>
+  <?php 
+    if (isset($_GET['p'])) {
+      $query = $_GET['p'];
+      if ($query === "bio") return include("./biodata.php");
+      if($query === 'fc') return include("./fotoCopy.php");
+      if ($query === "kal") return include("./kalkulatorS.php");
+      if ($query === "laundry") return include("./laundry.php");
+      if ($query === "sim") return include("./sim.php");
+      else echo "404, not found";
+    }
+  ?>
 </body>
 
 </html>

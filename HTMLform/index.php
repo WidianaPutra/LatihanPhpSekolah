@@ -19,7 +19,7 @@
     }
   </script>
   <style>
-    input, button, select {
+    input, button, select,textarea {
       border: 1px solid black;
     }
   </style>
@@ -28,7 +28,7 @@
 
 <body>
   <div class="flex justify-center h-20 items-center flex-col">
-    <h1>Portofolio</h1>
+    <h1 class="text-3xl">Portofolio</h1>
     <a href="https://github.com/WidianaPutra/LatihanPhpSekolah">=> Code Lebih Lengkap</a>
   </div>
   <div class="flex w-full gap-4 justify-center">
@@ -37,15 +37,18 @@
     <a href="?p=kal" class="bg-crimson p-2 text-white">Kalkulator</a>
     <a href="?p=laundry" class="bg-crimson p-2 text-white">Laundr</a>
     <a href="?p=sim" class="bg-crimson p-2 text-white">Sim</a>
+    <a href="?p=dis" class="bg-crimson p-2 text-white">Diskon</a>
   </div>
+
   <?php 
     if (isset($_GET['p'])) {
       $query = $_GET['p'];
       if ($query === "bio") return include("./biodata.php");
-      if($query === 'fc') return include("./fotoCopy.php");
+      if ($query === 'fc') return include("./fotoCopy.php");
       if ($query === "kal") return include("./kalkulatorS.php");
       if ($query === "laundry") return include("./laundry.php");
       if ($query === "sim") return include("./sim.php");
+      if ($query === 'dis') return include("./diskon.php"); 
       else echo "404, not found";
     }
   ?>

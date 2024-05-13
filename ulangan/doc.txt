@@ -1,0 +1,13 @@
+1. Buat Program Inputan untuk Soal Berikut ini
+Program Rumah Sakit
+Masukkan biodata Pasien
+Jika Pasien berobat ke poli umum biaya pemerikasaan sebesar 150.000
+Jika Pasien berobat ke poli Gigi biaya pemerikasaan sebesar 200.000
+Jika Pasien berobat ke poli Kulit biaya pemerikasaan sebesar 175.000
+Jika Pasien berobat ke poli Matabiaya pemerikasaan sebesar 250.000
+
+Jika Pasien Menggunakan BPJS mendapatkan potongan sebesar 50.000
+Inputkan Nama obat +vBiaya obat 
+Total Bayar = (Biaya poli+biaya obat)- BPJS
+
+Desain output menyerupai nota/ bukti pembayaran
